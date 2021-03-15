@@ -1,0 +1,2 @@
+# RestauranteSenac
+ C# + SQLite
