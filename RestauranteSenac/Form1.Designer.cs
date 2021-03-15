@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,9 +44,10 @@
             this.gbxFuncionarios = new System.Windows.Forms.GroupBox();
             this.btnCadFunc = new System.Windows.Forms.Button();
             this.btnListarFunc = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msPrincipal.SuspendLayout();
             this.gbxFuncionarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -59,15 +59,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(133, 24);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Restaurante";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestauranteSenac.Properties.Resources.logo__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // msPrincipal
             // 
@@ -124,19 +115,19 @@
             // documentaçãoToolStripMenuItem
             // 
             this.documentaçãoToolStripMenuItem.Name = "documentaçãoToolStripMenuItem";
-            this.documentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.documentaçãoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.documentaçãoToolStripMenuItem.Text = "Documentação";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // informaçõesToolStripMenuItem
             // 
             this.informaçõesToolStripMenuItem.Name = "informaçõesToolStripMenuItem";
-            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.informaçõesToolStripMenuItem.Text = "Informações";
             // 
             // listarToolStripMenuItem
@@ -144,12 +135,14 @@
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.listarToolStripMenuItem.Text = "Listar (Editar/Remover)";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // gbxCliente
             // 
@@ -191,6 +184,15 @@
             this.btnListarFunc.UseVisualStyleBackColor = true;
             this.btnListarFunc.Click += new System.EventHandler(this.btnListarFunc_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestauranteSenac.Properties.Resources.logo__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(159, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,10 +206,10 @@
             this.MainMenuStrip = this.msPrincipal;
             this.Name = "Form1";
             this.Text = "Menu Inicial";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.msPrincipal.ResumeLayout(false);
             this.msPrincipal.PerformLayout();
             this.gbxFuncionarios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

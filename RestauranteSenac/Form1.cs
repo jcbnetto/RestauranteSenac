@@ -40,5 +40,15 @@ namespace RestauranteSenac
             //reexibir a janela principal:
             this.Show();
         }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnListarFunc.PerformClick();
+        }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnCadFunc.PerformClick();
+        }
     }
 }
