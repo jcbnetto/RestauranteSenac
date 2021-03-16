@@ -24,6 +24,9 @@ namespace RestauranteSenac.db
             {
                 // Criar o arquivo de banco de dados:
                 SQLiteConnection.CreateFile("banco.sqlite3");
+                
+                // COMANDOS SQL PARA CRIAR A ESTRUTURA PADRÃO DO BANCO:
+                // PENDENTE!
             }
         }
         // Método para conectar:
