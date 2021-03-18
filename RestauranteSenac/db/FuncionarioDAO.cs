@@ -67,5 +67,24 @@ namespace RestauranteSenac.db
                 return false;
             }
         }
+        public static DataTable buscarUsuario(int id)
+        {
+            // Definir o objeto de "tabela" que será preenchido com a consulta:
+            DataTable tabela = new DataTable();
+            // Instanciar e conectar ao banco:
+            Banco banco = new Banco();
+            banco.Conectar();
+            // Criar o objeto SQLiteCommand:
+            var cmd = banco.conexao.CreateCommand();
+            // Definir qual comando DQL será executado:
+            cmd.CommandText = "SELECT * FROM Funcionarios WHERE id = " + id;
+            // Executar e "atribuir" o resultado em um objeto SQLiteDA
+            SQLiteDataAdapter da = new SQLiteDataAdapter(cmd.CommandText, banco.conexao);
+            // Definir qual "tabela" será preenchida com o resultado da consulta:
+            da.Fill(tabela);
+            // Desconectar:
+            banco.Desconectar();
+            return tabela;
+        }
     }
 }

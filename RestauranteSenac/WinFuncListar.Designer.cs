@@ -31,20 +31,33 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvFuncionarios = new System.Windows.Forms.DataGridView();
             this.gpxCadastro = new System.Windows.Forms.GroupBox();
-            this.gpxEditar = new System.Windows.Forms.GroupBox();
-            this.lblNomeCad = new System.Windows.Forms.Label();
-            this.txbNomeCad = new System.Windows.Forms.TextBox();
-            this.txbEmailCad = new System.Windows.Forms.TextBox();
-            this.lblEmailCad = new System.Windows.Forms.Label();
-            this.lblTelCad = new System.Windows.Forms.Label();
-            this.txbTelCad = new System.Windows.Forms.MaskedTextBox();
-            this.lblSetorCad = new System.Windows.Forms.Label();
-            this.txbSetorCad = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.txbFuncaoCad = new System.Windows.Forms.TextBox();
             this.lblFuncaoCad = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txbSetorCad = new System.Windows.Forms.TextBox();
+            this.lblSetorCad = new System.Windows.Forms.Label();
+            this.txbTelCad = new System.Windows.Forms.MaskedTextBox();
+            this.lblTelCad = new System.Windows.Forms.Label();
+            this.txbEmailCad = new System.Windows.Forms.TextBox();
+            this.lblEmailCad = new System.Windows.Forms.Label();
+            this.txbNomeCad = new System.Windows.Forms.TextBox();
+            this.lblNomeCad = new System.Windows.Forms.Label();
+            this.gpxEditar = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txbFuncaoEd = new System.Windows.Forms.TextBox();
+            this.lblFuncaoEd = new System.Windows.Forms.Label();
+            this.txbSetorEd = new System.Windows.Forms.TextBox();
+            this.lblSetorEd = new System.Windows.Forms.Label();
+            this.txbTelEd = new System.Windows.Forms.MaskedTextBox();
+            this.lblTelefoneEd = new System.Windows.Forms.Label();
+            this.txbEmailEd = new System.Windows.Forms.TextBox();
+            this.lblEmailEd = new System.Windows.Forms.Label();
+            this.txbNomeEd = new System.Windows.Forms.TextBox();
+            this.lblNomeEd = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.gpxCadastro.SuspendLayout();
+            this.gpxEditar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -70,6 +83,7 @@
             this.dgvFuncionarios.ReadOnly = true;
             this.dgvFuncionarios.Size = new System.Drawing.Size(718, 206);
             this.dgvFuncionarios.TabIndex = 1;
+            this.dgvFuncionarios.SelectionChanged += new System.EventHandler(this.dgvFuncionarios_SelectionChanged);
             // 
             // gpxCadastro
             // 
@@ -91,79 +105,15 @@
             this.gpxCadastro.TabStop = false;
             this.gpxCadastro.Text = "Cadastro";
             // 
-            // gpxEditar
+            // btnCadastrar
             // 
-            this.gpxEditar.Location = new System.Drawing.Point(454, 273);
-            this.gpxEditar.Name = "gpxEditar";
-            this.gpxEditar.Size = new System.Drawing.Size(286, 198);
-            this.gpxEditar.TabIndex = 3;
-            this.gpxEditar.TabStop = false;
-            this.gpxEditar.Text = "Editar";
-            // 
-            // lblNomeCad
-            // 
-            this.lblNomeCad.AutoSize = true;
-            this.lblNomeCad.Location = new System.Drawing.Point(6, 25);
-            this.lblNomeCad.Name = "lblNomeCad";
-            this.lblNomeCad.Size = new System.Drawing.Size(38, 13);
-            this.lblNomeCad.TabIndex = 0;
-            this.lblNomeCad.Text = "Nome:";
-            // 
-            // txbNomeCad
-            // 
-            this.txbNomeCad.Location = new System.Drawing.Point(60, 22);
-            this.txbNomeCad.Name = "txbNomeCad";
-            this.txbNomeCad.Size = new System.Drawing.Size(233, 20);
-            this.txbNomeCad.TabIndex = 1;
-            // 
-            // txbEmailCad
-            // 
-            this.txbEmailCad.Location = new System.Drawing.Point(60, 48);
-            this.txbEmailCad.Name = "txbEmailCad";
-            this.txbEmailCad.Size = new System.Drawing.Size(233, 20);
-            this.txbEmailCad.TabIndex = 3;
-            // 
-            // lblEmailCad
-            // 
-            this.lblEmailCad.AutoSize = true;
-            this.lblEmailCad.Location = new System.Drawing.Point(6, 51);
-            this.lblEmailCad.Name = "lblEmailCad";
-            this.lblEmailCad.Size = new System.Drawing.Size(35, 13);
-            this.lblEmailCad.TabIndex = 2;
-            this.lblEmailCad.Text = "Email:";
-            // 
-            // lblTelCad
-            // 
-            this.lblTelCad.AutoSize = true;
-            this.lblTelCad.Location = new System.Drawing.Point(6, 77);
-            this.lblTelCad.Name = "lblTelCad";
-            this.lblTelCad.Size = new System.Drawing.Size(52, 13);
-            this.lblTelCad.TabIndex = 4;
-            this.lblTelCad.Text = "Telefone:";
-            // 
-            // txbTelCad
-            // 
-            this.txbTelCad.Location = new System.Drawing.Point(60, 74);
-            this.txbTelCad.Mask = "(99) 00000-0000";
-            this.txbTelCad.Name = "txbTelCad";
-            this.txbTelCad.Size = new System.Drawing.Size(233, 20);
-            this.txbTelCad.TabIndex = 5;
-            // 
-            // lblSetorCad
-            // 
-            this.lblSetorCad.AutoSize = true;
-            this.lblSetorCad.Location = new System.Drawing.Point(6, 103);
-            this.lblSetorCad.Name = "lblSetorCad";
-            this.lblSetorCad.Size = new System.Drawing.Size(35, 13);
-            this.lblSetorCad.TabIndex = 6;
-            this.lblSetorCad.Text = "Setor:";
-            // 
-            // txbSetorCad
-            // 
-            this.txbSetorCad.Location = new System.Drawing.Point(60, 100);
-            this.txbSetorCad.Name = "txbSetorCad";
-            this.txbSetorCad.Size = new System.Drawing.Size(233, 20);
-            this.txbSetorCad.TabIndex = 7;
+            this.btnCadastrar.Location = new System.Drawing.Point(9, 152);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(284, 40);
+            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txbFuncaoCad
             // 
@@ -181,15 +131,194 @@
             this.lblFuncaoCad.TabIndex = 8;
             this.lblFuncaoCad.Text = "Função:";
             // 
-            // btnCadastrar
+            // txbSetorCad
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(9, 152);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(284, 40);
-            this.btnCadastrar.TabIndex = 10;
-            this.btnCadastrar.Text = "CADASTRAR";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.txbSetorCad.Location = new System.Drawing.Point(60, 100);
+            this.txbSetorCad.Name = "txbSetorCad";
+            this.txbSetorCad.Size = new System.Drawing.Size(233, 20);
+            this.txbSetorCad.TabIndex = 7;
+            // 
+            // lblSetorCad
+            // 
+            this.lblSetorCad.AutoSize = true;
+            this.lblSetorCad.Location = new System.Drawing.Point(6, 103);
+            this.lblSetorCad.Name = "lblSetorCad";
+            this.lblSetorCad.Size = new System.Drawing.Size(35, 13);
+            this.lblSetorCad.TabIndex = 6;
+            this.lblSetorCad.Text = "Setor:";
+            // 
+            // txbTelCad
+            // 
+            this.txbTelCad.Location = new System.Drawing.Point(60, 74);
+            this.txbTelCad.Mask = "(99) 00000-0000";
+            this.txbTelCad.Name = "txbTelCad";
+            this.txbTelCad.Size = new System.Drawing.Size(233, 20);
+            this.txbTelCad.TabIndex = 5;
+            // 
+            // lblTelCad
+            // 
+            this.lblTelCad.AutoSize = true;
+            this.lblTelCad.Location = new System.Drawing.Point(6, 77);
+            this.lblTelCad.Name = "lblTelCad";
+            this.lblTelCad.Size = new System.Drawing.Size(52, 13);
+            this.lblTelCad.TabIndex = 4;
+            this.lblTelCad.Text = "Telefone:";
+            // 
+            // txbEmailCad
+            // 
+            this.txbEmailCad.Location = new System.Drawing.Point(60, 48);
+            this.txbEmailCad.Name = "txbEmailCad";
+            this.txbEmailCad.Size = new System.Drawing.Size(233, 20);
+            this.txbEmailCad.TabIndex = 3;
+            // 
+            // lblEmailCad
+            // 
+            this.lblEmailCad.AutoSize = true;
+            this.lblEmailCad.Location = new System.Drawing.Point(6, 51);
+            this.lblEmailCad.Name = "lblEmailCad";
+            this.lblEmailCad.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailCad.TabIndex = 2;
+            this.lblEmailCad.Text = "Email:";
+            // 
+            // txbNomeCad
+            // 
+            this.txbNomeCad.Location = new System.Drawing.Point(60, 22);
+            this.txbNomeCad.Name = "txbNomeCad";
+            this.txbNomeCad.Size = new System.Drawing.Size(233, 20);
+            this.txbNomeCad.TabIndex = 1;
+            // 
+            // lblNomeCad
+            // 
+            this.lblNomeCad.AutoSize = true;
+            this.lblNomeCad.Location = new System.Drawing.Point(6, 25);
+            this.lblNomeCad.Name = "lblNomeCad";
+            this.lblNomeCad.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeCad.TabIndex = 0;
+            this.lblNomeCad.Text = "Nome:";
+            // 
+            // gpxEditar
+            // 
+            this.gpxEditar.Controls.Add(this.btnExcluir);
+            this.gpxEditar.Controls.Add(this.btnEditar);
+            this.gpxEditar.Controls.Add(this.txbNomeEd);
+            this.gpxEditar.Controls.Add(this.txbFuncaoEd);
+            this.gpxEditar.Controls.Add(this.lblNomeEd);
+            this.gpxEditar.Controls.Add(this.lblFuncaoEd);
+            this.gpxEditar.Controls.Add(this.lblEmailEd);
+            this.gpxEditar.Controls.Add(this.txbSetorEd);
+            this.gpxEditar.Controls.Add(this.txbEmailEd);
+            this.gpxEditar.Controls.Add(this.lblSetorEd);
+            this.gpxEditar.Controls.Add(this.lblTelefoneEd);
+            this.gpxEditar.Controls.Add(this.txbTelEd);
+            this.gpxEditar.Location = new System.Drawing.Point(431, 273);
+            this.gpxEditar.Name = "gpxEditar";
+            this.gpxEditar.Size = new System.Drawing.Size(309, 198);
+            this.gpxEditar.TabIndex = 3;
+            this.gpxEditar.TabStop = false;
+            this.gpxEditar.Text = "Editar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(120, 149);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(182, 40);
+            this.btnEditar.TabIndex = 21;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // txbFuncaoEd
+            // 
+            this.txbFuncaoEd.Location = new System.Drawing.Point(69, 123);
+            this.txbFuncaoEd.Name = "txbFuncaoEd";
+            this.txbFuncaoEd.Size = new System.Drawing.Size(233, 20);
+            this.txbFuncaoEd.TabIndex = 20;
+            // 
+            // lblFuncaoEd
+            // 
+            this.lblFuncaoEd.AutoSize = true;
+            this.lblFuncaoEd.Location = new System.Drawing.Point(15, 126);
+            this.lblFuncaoEd.Name = "lblFuncaoEd";
+            this.lblFuncaoEd.Size = new System.Drawing.Size(46, 13);
+            this.lblFuncaoEd.TabIndex = 19;
+            this.lblFuncaoEd.Text = "Função:";
+            // 
+            // txbSetorEd
+            // 
+            this.txbSetorEd.Location = new System.Drawing.Point(69, 97);
+            this.txbSetorEd.Name = "txbSetorEd";
+            this.txbSetorEd.Size = new System.Drawing.Size(233, 20);
+            this.txbSetorEd.TabIndex = 18;
+            // 
+            // lblSetorEd
+            // 
+            this.lblSetorEd.AutoSize = true;
+            this.lblSetorEd.Location = new System.Drawing.Point(15, 100);
+            this.lblSetorEd.Name = "lblSetorEd";
+            this.lblSetorEd.Size = new System.Drawing.Size(35, 13);
+            this.lblSetorEd.TabIndex = 17;
+            this.lblSetorEd.Text = "Setor:";
+            // 
+            // txbTelEd
+            // 
+            this.txbTelEd.Location = new System.Drawing.Point(69, 71);
+            this.txbTelEd.Mask = "(99) 00000-0000";
+            this.txbTelEd.Name = "txbTelEd";
+            this.txbTelEd.Size = new System.Drawing.Size(233, 20);
+            this.txbTelEd.TabIndex = 16;
+            // 
+            // lblTelefoneEd
+            // 
+            this.lblTelefoneEd.AutoSize = true;
+            this.lblTelefoneEd.Location = new System.Drawing.Point(15, 74);
+            this.lblTelefoneEd.Name = "lblTelefoneEd";
+            this.lblTelefoneEd.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefoneEd.TabIndex = 15;
+            this.lblTelefoneEd.Text = "Telefone:";
+            // 
+            // txbEmailEd
+            // 
+            this.txbEmailEd.Location = new System.Drawing.Point(69, 45);
+            this.txbEmailEd.Name = "txbEmailEd";
+            this.txbEmailEd.Size = new System.Drawing.Size(233, 20);
+            this.txbEmailEd.TabIndex = 14;
+            // 
+            // lblEmailEd
+            // 
+            this.lblEmailEd.AutoSize = true;
+            this.lblEmailEd.Location = new System.Drawing.Point(15, 48);
+            this.lblEmailEd.Name = "lblEmailEd";
+            this.lblEmailEd.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailEd.TabIndex = 13;
+            this.lblEmailEd.Text = "Email:";
+            // 
+            // txbNomeEd
+            // 
+            this.txbNomeEd.Location = new System.Drawing.Point(69, 19);
+            this.txbNomeEd.Name = "txbNomeEd";
+            this.txbNomeEd.Size = new System.Drawing.Size(233, 20);
+            this.txbNomeEd.TabIndex = 12;
+            // 
+            // lblNomeEd
+            // 
+            this.lblNomeEd.AutoSize = true;
+            this.lblNomeEd.Location = new System.Drawing.Point(15, 22);
+            this.lblNomeEd.Name = "lblNomeEd";
+            this.lblNomeEd.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeEd.TabIndex = 11;
+            this.lblNomeEd.Text = "Nome:";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Red;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(18, 149);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(96, 40);
+            this.btnExcluir.TabIndex = 22;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // WinFuncListar
             // 
@@ -206,6 +335,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).EndInit();
             this.gpxCadastro.ResumeLayout(false);
             this.gpxCadastro.PerformLayout();
+            this.gpxEditar.ResumeLayout(false);
+            this.gpxEditar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +359,17 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txbFuncaoCad;
         private System.Windows.Forms.Label lblFuncaoCad;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txbNomeEd;
+        private System.Windows.Forms.TextBox txbFuncaoEd;
+        private System.Windows.Forms.Label lblNomeEd;
+        private System.Windows.Forms.Label lblFuncaoEd;
+        private System.Windows.Forms.Label lblEmailEd;
+        private System.Windows.Forms.TextBox txbSetorEd;
+        private System.Windows.Forms.TextBox txbEmailEd;
+        private System.Windows.Forms.Label lblSetorEd;
+        private System.Windows.Forms.Label lblTelefoneEd;
+        private System.Windows.Forms.MaskedTextBox txbTelEd;
     }
 }
