@@ -112,8 +112,10 @@ namespace RestauranteSenac
                 func.Telefone = txbTelEd.Text;
                 func.Funcao = txbFuncaoEd.Text;
                 // Sabemos que o ID a editar está no iUsuario global!
+                // Chamamos nosso método de editar os dados, passando nosso obj e o id do funcionario selecionado
                 var resultado = db.FuncionarioDAO.editar(func, idUsuario);
-                if (resultado)
+                // Deu certo?
+                if (resultado == true)
                 {
                     MessageBox.Show("Informações modificadas!");
                     txbNomeEd.Clear();
@@ -124,6 +126,7 @@ namespace RestauranteSenac
                     atualizardados();
                     podeEditarApagar = false;
                 }
+                // Deu errado?
                 else
                 {
                     MessageBox.Show("Erro! Verifique os dados informados!");
@@ -139,7 +142,24 @@ namespace RestauranteSenac
         {
             if (podeEditarApagar)
             {
-
+                // chamar o método excluir do DAO já dentro do IF:
+                if (db.FuncionarioDAO.excluir(idUsuario))
+                {
+                    // Deu certo?
+                    MessageBox.Show("Usuário excluído!");
+                    txbNomeEd.Clear();
+                    txbSetorEd.Clear();
+                    txbEmailEd.Clear();
+                    txbTelEd.Clear();
+                    txbFuncaoEd.Clear();
+                    atualizardados();
+                    podeEditarApagar = false;
+                }
+                // Deu errado?
+                else
+                {
+                    MessageBox.Show("Erro! Verifique os dados informados!");
+                }
             }
             else
             {

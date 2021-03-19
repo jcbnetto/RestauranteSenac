@@ -88,8 +88,36 @@ namespace RestauranteSenac.db
         }
         public static bool excluir(int id)
         {
-            
+            // comandos para manipulação:
+            // Instanciar e conectar ao banco:
+            Banco banco = new Banco();
+            try
+            {
+                banco.Conectar();
+                // Criar o objeto SQLiteCommand:
+                var cmd = banco.conexao.CreateCommand();
+                // Definir qual comando DML (Insert - Delete - Update) será executado:
+                cmd.CommandText = "DELETE FROM Funcionarios WHERE id = @id";
+                // Definir a substituição dos parametros:
+                cmd.Parameters.AddWithValue("@id", id);
+                // Executar:
+                cmd.ExecuteNonQuery();
+                // Desconectar
+                banco.Desconectar();
+                // Se chegou até aqui é pq deu certo!
+                // Retornar true:
+                return true;
+            }
+            catch
+            {
+                // Desconectar
+                banco.Desconectar();
+                // Se chegou aqui é pq deu algum erro!
+                // Retornar false:
+                return false;
+            }
         }
+
         public static bool editar(Funcionario func, int id)
         {
             // comandos para manipulação:
