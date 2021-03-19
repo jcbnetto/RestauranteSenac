@@ -43,18 +43,18 @@
             this.txbNomeCad = new System.Windows.Forms.TextBox();
             this.lblNomeCad = new System.Windows.Forms.Label();
             this.gpxEditar = new System.Windows.Forms.GroupBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.txbFuncaoEd = new System.Windows.Forms.TextBox();
-            this.lblFuncaoEd = new System.Windows.Forms.Label();
-            this.txbSetorEd = new System.Windows.Forms.TextBox();
-            this.lblSetorEd = new System.Windows.Forms.Label();
-            this.txbTelEd = new System.Windows.Forms.MaskedTextBox();
-            this.lblTelefoneEd = new System.Windows.Forms.Label();
-            this.txbEmailEd = new System.Windows.Forms.TextBox();
-            this.lblEmailEd = new System.Windows.Forms.Label();
-            this.txbNomeEd = new System.Windows.Forms.TextBox();
-            this.lblNomeEd = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txbNomeEd = new System.Windows.Forms.TextBox();
+            this.txbFuncaoEd = new System.Windows.Forms.TextBox();
+            this.lblNomeEd = new System.Windows.Forms.Label();
+            this.lblFuncaoEd = new System.Windows.Forms.Label();
+            this.lblEmailEd = new System.Windows.Forms.Label();
+            this.txbSetorEd = new System.Windows.Forms.TextBox();
+            this.txbEmailEd = new System.Windows.Forms.TextBox();
+            this.lblSetorEd = new System.Windows.Forms.Label();
+            this.lblTelefoneEd = new System.Windows.Forms.Label();
+            this.txbTelEd = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionarios)).BeginInit();
             this.gpxCadastro.SuspendLayout();
             this.gpxEditar.SuspendLayout();
@@ -217,96 +217,6 @@
             this.gpxEditar.TabStop = false;
             this.gpxEditar.Text = "Editar";
             // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(120, 149);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(182, 40);
-            this.btnEditar.TabIndex = 21;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // txbFuncaoEd
-            // 
-            this.txbFuncaoEd.Location = new System.Drawing.Point(69, 123);
-            this.txbFuncaoEd.Name = "txbFuncaoEd";
-            this.txbFuncaoEd.Size = new System.Drawing.Size(233, 20);
-            this.txbFuncaoEd.TabIndex = 20;
-            // 
-            // lblFuncaoEd
-            // 
-            this.lblFuncaoEd.AutoSize = true;
-            this.lblFuncaoEd.Location = new System.Drawing.Point(15, 126);
-            this.lblFuncaoEd.Name = "lblFuncaoEd";
-            this.lblFuncaoEd.Size = new System.Drawing.Size(46, 13);
-            this.lblFuncaoEd.TabIndex = 19;
-            this.lblFuncaoEd.Text = "Função:";
-            // 
-            // txbSetorEd
-            // 
-            this.txbSetorEd.Location = new System.Drawing.Point(69, 97);
-            this.txbSetorEd.Name = "txbSetorEd";
-            this.txbSetorEd.Size = new System.Drawing.Size(233, 20);
-            this.txbSetorEd.TabIndex = 18;
-            // 
-            // lblSetorEd
-            // 
-            this.lblSetorEd.AutoSize = true;
-            this.lblSetorEd.Location = new System.Drawing.Point(15, 100);
-            this.lblSetorEd.Name = "lblSetorEd";
-            this.lblSetorEd.Size = new System.Drawing.Size(35, 13);
-            this.lblSetorEd.TabIndex = 17;
-            this.lblSetorEd.Text = "Setor:";
-            // 
-            // txbTelEd
-            // 
-            this.txbTelEd.Location = new System.Drawing.Point(69, 71);
-            this.txbTelEd.Mask = "(99) 00000-0000";
-            this.txbTelEd.Name = "txbTelEd";
-            this.txbTelEd.Size = new System.Drawing.Size(233, 20);
-            this.txbTelEd.TabIndex = 16;
-            // 
-            // lblTelefoneEd
-            // 
-            this.lblTelefoneEd.AutoSize = true;
-            this.lblTelefoneEd.Location = new System.Drawing.Point(15, 74);
-            this.lblTelefoneEd.Name = "lblTelefoneEd";
-            this.lblTelefoneEd.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefoneEd.TabIndex = 15;
-            this.lblTelefoneEd.Text = "Telefone:";
-            // 
-            // txbEmailEd
-            // 
-            this.txbEmailEd.Location = new System.Drawing.Point(69, 45);
-            this.txbEmailEd.Name = "txbEmailEd";
-            this.txbEmailEd.Size = new System.Drawing.Size(233, 20);
-            this.txbEmailEd.TabIndex = 14;
-            // 
-            // lblEmailEd
-            // 
-            this.lblEmailEd.AutoSize = true;
-            this.lblEmailEd.Location = new System.Drawing.Point(15, 48);
-            this.lblEmailEd.Name = "lblEmailEd";
-            this.lblEmailEd.Size = new System.Drawing.Size(35, 13);
-            this.lblEmailEd.TabIndex = 13;
-            this.lblEmailEd.Text = "Email:";
-            // 
-            // txbNomeEd
-            // 
-            this.txbNomeEd.Location = new System.Drawing.Point(69, 19);
-            this.txbNomeEd.Name = "txbNomeEd";
-            this.txbNomeEd.Size = new System.Drawing.Size(233, 20);
-            this.txbNomeEd.TabIndex = 12;
-            // 
-            // lblNomeEd
-            // 
-            this.lblNomeEd.AutoSize = true;
-            this.lblNomeEd.Location = new System.Drawing.Point(15, 22);
-            this.lblNomeEd.Name = "lblNomeEd";
-            this.lblNomeEd.Size = new System.Drawing.Size(38, 13);
-            this.lblNomeEd.TabIndex = 11;
-            this.lblNomeEd.Text = "Nome:";
-            // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.Red;
@@ -319,6 +229,98 @@
             this.btnExcluir.TabIndex = 22;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(120, 149);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(182, 40);
+            this.btnEditar.TabIndex = 21;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txbNomeEd
+            // 
+            this.txbNomeEd.Location = new System.Drawing.Point(69, 19);
+            this.txbNomeEd.Name = "txbNomeEd";
+            this.txbNomeEd.Size = new System.Drawing.Size(233, 20);
+            this.txbNomeEd.TabIndex = 12;
+            // 
+            // txbFuncaoEd
+            // 
+            this.txbFuncaoEd.Location = new System.Drawing.Point(69, 123);
+            this.txbFuncaoEd.Name = "txbFuncaoEd";
+            this.txbFuncaoEd.Size = new System.Drawing.Size(233, 20);
+            this.txbFuncaoEd.TabIndex = 20;
+            // 
+            // lblNomeEd
+            // 
+            this.lblNomeEd.AutoSize = true;
+            this.lblNomeEd.Location = new System.Drawing.Point(15, 22);
+            this.lblNomeEd.Name = "lblNomeEd";
+            this.lblNomeEd.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeEd.TabIndex = 11;
+            this.lblNomeEd.Text = "Nome:";
+            // 
+            // lblFuncaoEd
+            // 
+            this.lblFuncaoEd.AutoSize = true;
+            this.lblFuncaoEd.Location = new System.Drawing.Point(15, 126);
+            this.lblFuncaoEd.Name = "lblFuncaoEd";
+            this.lblFuncaoEd.Size = new System.Drawing.Size(46, 13);
+            this.lblFuncaoEd.TabIndex = 19;
+            this.lblFuncaoEd.Text = "Função:";
+            // 
+            // lblEmailEd
+            // 
+            this.lblEmailEd.AutoSize = true;
+            this.lblEmailEd.Location = new System.Drawing.Point(15, 48);
+            this.lblEmailEd.Name = "lblEmailEd";
+            this.lblEmailEd.Size = new System.Drawing.Size(35, 13);
+            this.lblEmailEd.TabIndex = 13;
+            this.lblEmailEd.Text = "Email:";
+            // 
+            // txbSetorEd
+            // 
+            this.txbSetorEd.Location = new System.Drawing.Point(69, 97);
+            this.txbSetorEd.Name = "txbSetorEd";
+            this.txbSetorEd.Size = new System.Drawing.Size(233, 20);
+            this.txbSetorEd.TabIndex = 18;
+            // 
+            // txbEmailEd
+            // 
+            this.txbEmailEd.Location = new System.Drawing.Point(69, 45);
+            this.txbEmailEd.Name = "txbEmailEd";
+            this.txbEmailEd.Size = new System.Drawing.Size(233, 20);
+            this.txbEmailEd.TabIndex = 14;
+            // 
+            // lblSetorEd
+            // 
+            this.lblSetorEd.AutoSize = true;
+            this.lblSetorEd.Location = new System.Drawing.Point(15, 100);
+            this.lblSetorEd.Name = "lblSetorEd";
+            this.lblSetorEd.Size = new System.Drawing.Size(35, 13);
+            this.lblSetorEd.TabIndex = 17;
+            this.lblSetorEd.Text = "Setor:";
+            // 
+            // lblTelefoneEd
+            // 
+            this.lblTelefoneEd.AutoSize = true;
+            this.lblTelefoneEd.Location = new System.Drawing.Point(15, 74);
+            this.lblTelefoneEd.Name = "lblTelefoneEd";
+            this.lblTelefoneEd.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefoneEd.TabIndex = 15;
+            this.lblTelefoneEd.Text = "Telefone:";
+            // 
+            // txbTelEd
+            // 
+            this.txbTelEd.Location = new System.Drawing.Point(69, 71);
+            this.txbTelEd.Mask = "(99) 00000-0000";
+            this.txbTelEd.Name = "txbTelEd";
+            this.txbTelEd.Size = new System.Drawing.Size(233, 20);
+            this.txbTelEd.TabIndex = 16;
             // 
             // WinFuncListar
             // 

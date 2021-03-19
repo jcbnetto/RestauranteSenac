@@ -86,5 +86,45 @@ namespace RestauranteSenac.db
             banco.Desconectar();
             return tabela;
         }
+        public static bool excluir(int id)
+        {
+            
+        }
+        public static bool editar(Funcionario func, int id)
+        {
+            // comandos para manipulação:
+            // Instanciar e conectar ao banco:
+            Banco banco = new Banco();
+            try
+            {
+                banco.Conectar();
+                // Criar o objeto SQLiteCommand:
+                var cmd = banco.conexao.CreateCommand();
+                // Definir qual comando DML (Insert - Delete - Update) será executado:
+                cmd.CommandText = "UPDATE Funcionarios SET Nome = @nome, Setor = @setor, Email = @email, Telefone = @telefone, Funcao = @funcao WHERE id = @id";
+                // Definir a substituição dos parametros:
+                cmd.Parameters.AddWithValue("@nome", func.Nome);
+                cmd.Parameters.AddWithValue("@setor", func.Setor);
+                cmd.Parameters.AddWithValue("@email", func.Email);
+                cmd.Parameters.AddWithValue("@telefone", func.Telefone);
+                cmd.Parameters.AddWithValue("@funcao", func.Funcao);
+                cmd.Parameters.AddWithValue("@id", id);
+                // Executar:
+                cmd.ExecuteNonQuery();
+                // Desconectar
+                banco.Desconectar();
+                // Se chegou até aqui é pq deu certo!
+                // Retornar true:
+                return true;
+            }
+            catch
+            {
+                // Desconectar
+                banco.Desconectar();
+                // Se chegou aqui é pq deu algum erro!
+                // Retornar false:
+                return false;
+            }
+        }
     }
 }
