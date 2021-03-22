@@ -24,9 +24,25 @@ namespace RestauranteSenac.db
             {
                 // Criar o arquivo de banco de dados:
                 SQLiteConnection.CreateFile("banco.sqlite3");
-                
+
                 // COMANDOS SQL PARA CRIAR A ESTRUTURA PADRÃO DO BANCO:
-                // PENDENTE!
+                // Será executado apenas na primeira vez que o código rodar:
+                // Conectar com o banco:
+                this.Conectar();
+                var cmd = this.conexao.CreateCommand();
+                // Comando SQL:
+                cmd.CommandText = "CREATE TABLE 'Funcionarios' (" +
+                 "'id'    INTEGER NOT NULL UNIQUE," +
+                "'Nome'  TEXT NOT NULL," +
+                "'Setor' INTEGER NOT NULL," +
+                "'Email' TEXT NOT NULL UNIQUE," +
+                "'Telefone'  TEXT NOT NULL UNIQUE," +
+                "'Funcao'    TEXT NOT NULL," +
+                "PRIMARY KEY('id' AUTOINCREMENT));";
+                // Executar o comando:
+                cmd.ExecuteNonQuery();
+                // Desconectar:
+                this.Desconectar();
             }
         }
         // Método para conectar:
