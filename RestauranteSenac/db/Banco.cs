@@ -19,11 +19,18 @@ namespace RestauranteSenac.db
         {
             // Apontar onde estará nosso arquivo de banco de dados:
             conexao = new SQLiteConnection("Data Source=banco.sqlite3");
+            // Definir o caminho
+            string caminhoLocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string caminho = caminhoLocalAppData + "/Restaurante Senac";
+
             // Verificar se o arquivo banco.sqlite3 NÃO existe:
-            if (!File.Exists("./banco.sqlite3"))
+            if (!File.Exists(caminho + "/banco.sqlite3"))
             {
+                // Criar a pasta no caminho
+                Directory.CreateDirectory(caminho);
+
                 // Criar o arquivo de banco de dados:
-                SQLiteConnection.CreateFile("banco.sqlite3");
+                SQLiteConnection.CreateFile(caminho + "/banco.sqlite3");
 
                 // COMANDOS SQL PARA CRIAR A ESTRUTURA PADRÃO DO BANCO:
                 // Será executado apenas na primeira vez que o código rodar:
