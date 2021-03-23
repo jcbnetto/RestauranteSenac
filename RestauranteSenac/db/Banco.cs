@@ -19,6 +19,7 @@ namespace RestauranteSenac.db
         {
             // Apontar onde estará nosso arquivo de banco de dados:
             conexao = new SQLiteConnection("Data Source=banco.sqlite3");
+            
             // Definir o caminho
             string caminhoLocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             string caminho = caminhoLocalAppData + "/Restaurante Senac";
