@@ -17,12 +17,13 @@ namespace RestauranteSenac.db
         // Contrutor de conexão:
         public Banco()
         {
-            // Apontar onde estará nosso arquivo de banco de dados:
-            conexao = new SQLiteConnection("Data Source=banco.sqlite3");
-            
-            // Definir o caminho
             string caminhoLocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             string caminho = caminhoLocalAppData + "/Restaurante Senac";
+            // Apontar onde estará nosso arquivo de banco de dados:
+            conexao = new SQLiteConnection("Data Source= " +caminho + "/banco.sqlite3");
+            
+            // Definir o caminho
+            
 
             // Verificar se o arquivo banco.sqlite3 NÃO existe:
             if (!File.Exists(caminho + "/banco.sqlite3"))
