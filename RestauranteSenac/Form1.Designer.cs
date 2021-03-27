@@ -34,17 +34,17 @@
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pratosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informaçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxCliente = new System.Windows.Forms.GroupBox();
             this.gbxFuncionarios = new System.Windows.Forms.GroupBox();
-            this.btnCadFunc = new System.Windows.Forms.Button();
             this.btnListarFunc = new System.Windows.Forms.Button();
+            this.btnCadFunc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.msPrincipal.SuspendLayout();
             this.gbxFuncionarios.SuspendLayout();
@@ -53,10 +53,10 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(259, 92);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(133, 24);
+            this.lblTitulo.Size = new System.Drawing.Size(129, 25);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Restaurante";
             // 
@@ -105,6 +105,20 @@
             this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.funcionárioToolStripMenuItem.Text = "Funcionários";
             // 
+            // listarToolStripMenuItem
+            // 
+            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.listarToolStripMenuItem.Text = "Listar (Editar/Remover)";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            // 
+            // cadastrarToolStripMenuItem
+            // 
+            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            // 
             // pratosToolStripMenuItem
             // 
             this.pratosToolStripMenuItem.Name = "pratosToolStripMenuItem";
@@ -124,32 +138,20 @@
             // documentaçãoToolStripMenuItem
             // 
             this.documentaçãoToolStripMenuItem.Name = "documentaçãoToolStripMenuItem";
-            this.documentaçãoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.documentaçãoToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.documentaçãoToolStripMenuItem.Text = "Documentação";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // informaçõesToolStripMenuItem
             // 
             this.informaçõesToolStripMenuItem.Name = "informaçõesToolStripMenuItem";
-            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informaçõesToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.informaçõesToolStripMenuItem.Text = "Informações";
-            // 
-            // listarToolStripMenuItem
-            // 
-            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.listarToolStripMenuItem.Text = "Listar (Editar/Remover)";
-            // 
-            // cadastrarToolStripMenuItem
-            // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             // 
             // gbxCliente
             // 
@@ -171,16 +173,6 @@
             this.gbxFuncionarios.TabStop = false;
             this.gbxFuncionarios.Text = "Funcionários";
             // 
-            // btnCadFunc
-            // 
-            this.btnCadFunc.Location = new System.Drawing.Point(6, 19);
-            this.btnCadFunc.Name = "btnCadFunc";
-            this.btnCadFunc.Size = new System.Drawing.Size(233, 23);
-            this.btnCadFunc.TabIndex = 5;
-            this.btnCadFunc.Text = "Cadastrar";
-            this.btnCadFunc.UseVisualStyleBackColor = true;
-            this.btnCadFunc.Click += new System.EventHandler(this.btnCadFunc_Click);
-            // 
             // btnListarFunc
             // 
             this.btnListarFunc.Location = new System.Drawing.Point(6, 48);
@@ -190,6 +182,16 @@
             this.btnListarFunc.Text = "Listar (Editar/Remover)";
             this.btnListarFunc.UseVisualStyleBackColor = true;
             this.btnListarFunc.Click += new System.EventHandler(this.btnListarFunc_Click);
+            // 
+            // btnCadFunc
+            // 
+            this.btnCadFunc.Location = new System.Drawing.Point(6, 19);
+            this.btnCadFunc.Name = "btnCadFunc";
+            this.btnCadFunc.Size = new System.Drawing.Size(233, 23);
+            this.btnCadFunc.TabIndex = 5;
+            this.btnCadFunc.Text = "Cadastrar";
+            this.btnCadFunc.UseVisualStyleBackColor = true;
+            this.btnCadFunc.Click += new System.EventHandler(this.btnCadFunc_Click);
             // 
             // Form1
             // 
