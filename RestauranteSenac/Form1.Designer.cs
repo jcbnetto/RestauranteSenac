@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,14 +45,9 @@
             this.gbxFuncionarios = new System.Windows.Forms.GroupBox();
             this.btnListarFunc = new System.Windows.Forms.Button();
             this.btnCadFunc = new System.Windows.Forms.Button();
-<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-=======
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
->>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
             this.msPrincipal.SuspendLayout();
             this.gbxFuncionarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -63,6 +59,15 @@
             this.lblTitulo.Size = new System.Drawing.Size(129, 25);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Restaurante";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestauranteSenac.Properties.Resources.logo__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(159, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // msPrincipal
             // 
@@ -169,8 +174,6 @@
             this.gbxFuncionarios.Text = "Funcionários";
             // 
             // btnListarFunc
-<<<<<<< HEAD
-=======
             // 
             this.btnListarFunc.Location = new System.Drawing.Point(6, 48);
             this.btnListarFunc.Name = "btnListarFunc";
@@ -179,26 +182,6 @@
             this.btnListarFunc.Text = "Listar (Editar/Remover)";
             this.btnListarFunc.UseVisualStyleBackColor = true;
             this.btnListarFunc.Click += new System.EventHandler(this.btnListarFunc_Click);
-            // 
-            // btnCadFunc
-            // 
-            this.btnCadFunc.Location = new System.Drawing.Point(6, 19);
-            this.btnCadFunc.Name = "btnCadFunc";
-            this.btnCadFunc.Size = new System.Drawing.Size(233, 23);
-            this.btnCadFunc.TabIndex = 5;
-            this.btnCadFunc.Text = "Cadastrar";
-            this.btnCadFunc.UseVisualStyleBackColor = true;
-            this.btnCadFunc.Click += new System.EventHandler(this.btnCadFunc_Click);
-            // 
-            // pictureBox1
->>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
-            // 
-            this.pictureBox1.Image = global::RestauranteSenac.Properties.Resources.logo__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCadFunc
             // 
@@ -223,11 +206,10 @@
             this.MainMenuStrip = this.msPrincipal;
             this.Name = "Form1";
             this.Text = "Menu Inicial";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.msPrincipal.ResumeLayout(false);
             this.msPrincipal.PerformLayout();
             this.gbxFuncionarios.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
