@@ -9,6 +9,7 @@ namespace RestauranteSenac
     class Funcionario
     {
         public string Nome { get; set; }
+<<<<<<< HEAD
 
         public string Email { get; set; }
 
@@ -17,5 +18,11 @@ namespace RestauranteSenac
         public int Setor { get; set; }
 
         public string Funcao{ get; set; }
+=======
+        public int Setor { get; set; }
+        public string Email { get; set; }
+        public string Telefone { get; set; }
+        public string Funcao { get; set; }
+>>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
     }
 }

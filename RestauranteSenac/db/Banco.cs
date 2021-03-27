@@ -14,6 +14,7 @@ namespace RestauranteSenac.db
         // Objeto de conexão SQL:
         public SQLiteConnection conexao;
 
+<<<<<<< HEAD
         // Construtor de conexão :
         public Banco()
         {
@@ -30,6 +31,29 @@ namespace RestauranteSenac.db
 
 
                 // Comandos SQL para a estrutura padrão do banco:
+=======
+        // Contrutor de conexão:
+        public Banco()
+        {
+            string caminhoLocalAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string caminho = caminhoLocalAppData + "/Restaurante Senac";
+            // Apontar onde estará nosso arquivo de banco de dados:
+            conexao = new SQLiteConnection("Data Source= " +caminho + "/banco.sqlite3");
+            
+            // Definir o caminho
+            
+
+            // Verificar se o arquivo banco.sqlite3 NÃO existe:
+            if (!File.Exists(caminho + "/banco.sqlite3"))
+            {
+                // Criar a pasta no caminho
+                Directory.CreateDirectory(caminho);
+
+                // Criar o arquivo de banco de dados:
+                SQLiteConnection.CreateFile(caminho + "/banco.sqlite3");
+
+                // COMANDOS SQL PARA CRIAR A ESTRUTURA PADRÃO DO BANCO:
+>>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
                 // Será executado apenas na primeira vez que o código rodar:
                 // Conectar com o banco:
                 this.Conectar();
@@ -49,6 +73,7 @@ namespace RestauranteSenac.db
                 this.Desconectar();
             }
         }
+<<<<<<< HEAD
     
         
          // Método para conectar:
@@ -56,6 +81,13 @@ namespace RestauranteSenac.db
         {
             // Verificar se a conexão não está aberta:
             if (conexao.State != ConnectionState.Open)
+=======
+        // Método para conectar:
+        public void Conectar()
+        {
+            // Verificar se a conexão não está aberta:
+            if(conexao.State != ConnectionState.Open)
+>>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
             {
                 // Abrir a conexão:
                 conexao.Open();
@@ -66,12 +98,19 @@ namespace RestauranteSenac.db
         public void Desconectar()
         {
             // Verificar se a conexão não está fechada:
+<<<<<<< HEAD
             if (conexao.State != ConnectionState.Closed)
+=======
+            if(conexao.State != ConnectionState.Closed)
+>>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
             {
                 // Fechar a conexão:
                 conexao.Close();
             }
+<<<<<<< HEAD
                
+=======
+>>>>>>> b4842471decdf08dcf86e58ce6f415a50cfbd188
         }
     }
 }
